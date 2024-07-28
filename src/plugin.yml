@@ -5,12 +5,10 @@ main: fr.SoloLeveling.uhc.Main
 author: Qomoxyy l3imonice
 commands:
   sl:
-    description: Permet d'acceder à toutes lezs commande du mode de jeu UHC Solo Leveling.
-    permission: admin.sololevelinguhc
+    description: Permet d'acceder à toutes les commande du mode de jeu UHC Solo Leveling.
+    permission: admin
     permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.
   alert:
     description: envoie une alerte(broadcast)
     permission: admin
     permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.
-
-

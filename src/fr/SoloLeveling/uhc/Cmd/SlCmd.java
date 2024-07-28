@@ -10,6 +10,7 @@ public class SlCmd implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
+
         if (sender instanceof Player player) {
 
             if (args.length == 1) {
@@ -25,6 +26,7 @@ public class SlCmd implements CommandExecutor {
                 } else{
                     player.sendMessage("[Erreur] La commande : /sl <arguments>");
                 }
+
                 return true;
             }
 
