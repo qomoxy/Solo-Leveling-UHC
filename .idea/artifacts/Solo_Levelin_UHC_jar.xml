@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Solo Levelin UHC:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Solo_Levelin_UHC_jar</output-path>
+    <root id="archive" name="Solo Levelin UHC.jar">
+      <element id="module-output" name="Solo Levelin UHC" />
+    </root>
+  </artifact>
+</component>
