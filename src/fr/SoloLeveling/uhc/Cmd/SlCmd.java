@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+
 public class SlCmd implements CommandExecutor {
 
     @Override
@@ -17,14 +18,19 @@ public class SlCmd implements CommandExecutor {
 
                     player.sendMessage("Bienvenue dans l'UHC Solo Leveling !");
 
-                    player.setFoodLevel(5);
-                }
-                else{
+                } else if (args[0].equalsIgnoreCase("me")) {
+
+                    player.sendMessage("En dev");
+
+                } else{
                     player.sendMessage("[Erreur] La commande : /sl <arguments>");
                 }
-
+                return true;
             }
 
+            else {
+                player.sendMessage("[Erreur] La commande : /sl <arguments>");
+            }
         }
         return false;
     }

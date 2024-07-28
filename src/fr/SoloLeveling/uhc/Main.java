@@ -1,5 +1,6 @@
 package fr.SoloLeveling.uhc;
 
+import fr.SoloLeveling.uhc.Cmd.AlertCmd;
 import fr.SoloLeveling.uhc.Cmd.SlCmd;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,6 +12,7 @@ public class Main extends JavaPlugin {
         System.out.println("LE Plugin Solo Leveling UHC est Active.");
 
         getCommand("sl").setExecutor(new SlCmd());
+        getCommand("alert").setExecutor(new AlertCmd());
 
     }
 
