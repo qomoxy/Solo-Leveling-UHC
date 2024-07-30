@@ -33,6 +33,7 @@ public class SlCmd implements CommandExecutor {
             else {
                 player.sendMessage("[Erreur] La commande : /sl <arguments>");
             }
+            return true;
         }
         return false;
     }
