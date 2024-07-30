@@ -13,26 +13,26 @@ public class SayCmd implements CommandExecutor {
 
         if(sender instanceof Player p){
 
-            if(cmd.getName().equalsIgnoreCase("say")){
 
-                if(args.length == 0){
-                    p.sendMessage("[SL] La commande est : /say <message>");
+
+            if(args.length == 0){
+                p.sendMessage("[SL] La commande est : /say <message>");
+            }
+
+            else {
+                StringBuilder bc = new StringBuilder();
+
+                for(String part : args){
+
+                    bc.append(part).append(" ");
                 }
 
-                else if(args.length == 1){
-
-                    StringBuilder bc = new StringBuilder();
-
-                    for(String part : args){
-
-                        bc.append(part).append(" ");
-                    }
-
-                    Bukkit.broadcastMessage(" [" + p.getName() + "] " + bc);
-                }
+                Bukkit.broadcastMessage(" [" + p.getName() + "]   " + bc);
             }
             return true;
         }
         return false;
     }
+
 }
+

@@ -10,11 +10,9 @@ public class MbCmd implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        Player player = (Player) sender;
-
         if (sender != null) {
 
-            player.sendMessage("Voici le mumble de la partie: <mumble:port:lien:game>");
+            sender.sendMessage("Voici le mumble de la partie: <mumble:port:lien:game>");
 
             return true;
 

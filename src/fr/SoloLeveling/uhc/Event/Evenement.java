@@ -51,7 +51,7 @@ public class Evenement implements Listener {
 
         if (item.getType() == Material.COMPASS && item.getItemMeta().hasDisplayName() && Objects.equals(item.getItemMeta().getDisplayName(), "§aMenu")){
             if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
-                Inventory inv = Bukkit.createInventory(null, 6, "§eMenu");
+                Inventory inv = Bukkit.createInventory(null, 9, "§eMenu");
 
                 player.openInventory(inv);
             }

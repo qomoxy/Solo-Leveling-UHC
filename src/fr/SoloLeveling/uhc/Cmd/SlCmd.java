@@ -1,9 +1,14 @@
 package fr.SoloLeveling.uhc.Cmd;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.SkullMeta;
 
 
 public class SlCmd implements CommandExecutor {
@@ -22,6 +27,21 @@ public class SlCmd implements CommandExecutor {
                 } else if (args[0].equalsIgnoreCase("me")) {
 
                     player.sendMessage("En dev");
+
+                } else if (args[0].equalsIgnoreCase("color")){
+                    Inventory inv_color = Bukkit.createInventory(null, 9, "§eMenu des couleurs");
+
+                    for (Player p1 : Bukkit.getOnlinePlayers()) {
+
+                        ItemStack head = new ItemStack(Material.SKULL_ITEM, 1, (byte) 3);
+                        SkullMeta meta = (SkullMeta) head.getItemMeta();
+                        meta.setDisplayName(p1.getDisplayName());
+                        meta.setOwner(p1.getName());
+                        head.setItemMeta(meta);
+
+                        inv_color.addItem(head);
+                    }
+                        player.openInventory(inv_color);
 
                 } else{
                     player.sendMessage("[Erreur] La commande : /sl <arguments>");
