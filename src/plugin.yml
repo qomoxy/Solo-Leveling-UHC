@@ -22,3 +22,7 @@ commands:
     alias: mb, mumble, mmb
     permission: admin
     permission-message: None
+  start:
+    description: Permet de lancer la partie.
+    permission: admin
+    permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.

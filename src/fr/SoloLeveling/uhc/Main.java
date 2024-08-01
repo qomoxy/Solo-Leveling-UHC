@@ -3,6 +3,7 @@ package fr.SoloLeveling.uhc;
 import fr.SoloLeveling.uhc.Cmd.MbCmd;
 import fr.SoloLeveling.uhc.Cmd.SayCmd;
 import fr.SoloLeveling.uhc.Cmd.SlCmd;
+import fr.SoloLeveling.uhc.Cmd.StartCmd;
 import fr.SoloLeveling.uhc.Event.Evenement;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,12 +18,11 @@ public class Main extends JavaPlugin {
         getCommand("sl").setExecutor(new SlCmd());
         getCommand("say").setExecutor(new SayCmd());
         getCommand("mb").setExecutor(new MbCmd());
+        getCommand("start").setExecutor(new StartCmd());
 
         Bukkit.getPluginManager().registerEvents(new Evenement(), this);
 
-
     }
-
 
     @Override
     public void onDisable() {
@@ -30,6 +30,7 @@ public class Main extends JavaPlugin {
         System.out.println("Le plugin Solo leveling est Désactive.");
 
     }
+
 
 }
 
