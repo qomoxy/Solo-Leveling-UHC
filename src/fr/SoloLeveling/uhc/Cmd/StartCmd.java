@@ -1,5 +1,6 @@
 package fr.SoloLeveling.uhc.Cmd;
 
+import fr.SoloLeveling.uhc.task.TimerTask;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -10,7 +11,10 @@ public class StartCmd implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
 
         if(sender instanceof Player) {
-            sender.sendMessage("Vous devez être un joueur pour executer cette commande.");
+
+            TimerTask timerTask = new TimerTask();
+            timerTask.runTaskTimer(null,0,20);
+
             return true;
         }
         return false;

@@ -6,8 +6,10 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 public class CustomItem {
+
     private final ItemStack itemStack;
 
     private CustomItem(ItemBuilder builder) {
@@ -19,6 +21,7 @@ public class CustomItem {
     }
 
     public static class ItemBuilder {
+
         private final ItemStack itemStack;
         private final ItemMeta itemMeta;
 
@@ -37,8 +40,13 @@ public class CustomItem {
             return this;
         }
 
-        public ItemBuilder setEnchantment(Enchantment enchantment, int level) {
-            itemMeta.addEnchant(enchantment, level, true);
+        public ItemBuilder setEnchantment(Enchantment enchantment, int level, boolean ignoreLevelRestriction) {
+            itemMeta.addEnchant(enchantment, level, ignoreLevelRestriction);
+            return this;
+        }
+
+        public ItemBuilder setEnchantment(Enchantment enchantment) {
+            itemMeta.addEnchant(enchantment, 1, true);
             return this;
         }
 
@@ -52,13 +60,37 @@ public class CustomItem {
             return this;
         }
 
+        public ItemBuilder owner(String owner) {
+            SkullMeta meta = (SkullMeta) itemMeta;
+            meta.setOwner(owner);
+            itemStack.setItemMeta(meta);
+            return this;
+        }
+
+        public ItemBuilder setUnbreakable(boolean unbreakable) {
+            itemMeta.spigot().setUnbreakable(unbreakable);
+            return this;
+        }
+
+        public ItemBuilder type(Material material) {
+            itemStack.setType(material);
+            return this;
+        }
+
+        public ItemBuilder clearLore() {
+            itemMeta.setLore(null);
+            return this;
+        }
+
+        public ItemBuilder clearEnchantments() {
+            itemMeta.getEnchants().keySet().forEach(itemMeta::removeEnchant);
+            return this;
+        }
+
+
         public CustomItem build() {
             itemStack.setItemMeta(itemMeta);
             return new CustomItem(this);
-        }
-
-        public ItemBuilder getBuilder() {
-            return this;
         }
     }
 }
