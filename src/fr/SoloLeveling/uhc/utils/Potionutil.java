@@ -12,179 +12,146 @@ public class Potionutil {
     //J'aimerais enleve toutes la creations des effets de potions et les mettre dans une seule methode, afin de simplifier et de pouvoir changer la duration et l'amplificateur.
     //Je vais donc creer une methode qui prend en parametre le type de l'effet, la duration et l'amplificateur.
 
-    public static final PotionEffect SPEED =
-            new PotionEffect(PotionEffectType.SPEED, 999999, 1, false, false);
 
-    public static final PotionEffect REGEN =
-            new PotionEffect(PotionEffectType.REGENERATION, 999999, 1, false, false);
-
-    public static final PotionEffect RESISTANCE =
-            new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 999999, 1, false, false);
-
-    public static final PotionEffect STRENGTH =
-            new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 999999, 1, false, false);
-
-    public static final PotionEffect INVISIBILITY =
-            new PotionEffect(PotionEffectType.INVISIBILITY, 999999, 1, false, false);
-
-    public static final PotionEffect NIGHT_VISION =
-            new PotionEffect(PotionEffectType.NIGHT_VISION, 999999, 1, false, false);
-
-    public static final PotionEffect FIRE_RESISTANCE =
-            new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 999999, 1, false, false);
-
-    public static final PotionEffect SLOWNESS =
-            new PotionEffect(PotionEffectType.SLOW, 999999, 1, false, false);
-
-    public static final PotionEffect WEAKNESS =
-            new PotionEffect(PotionEffectType.WEAKNESS, 999999, 1, false, false);
-
-    public static final PotionEffect POISON =
-            new PotionEffect(PotionEffectType.POISON, 999999, 1, false, false);
-
-    public static final PotionEffect BLINDNESS =
-            new PotionEffect(PotionEffectType.BLINDNESS, 999999, 1, false, false);
-
-
-    public static void giveSpeed(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveSpeed(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.SPEED)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(SPEED);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveRegen(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveRegen(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.REGENERATION)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(REGEN);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveResistance(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveResistance(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.DAMAGE_RESISTANCE)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(RESISTANCE);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveStrength(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveStrength(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.INCREASE_DAMAGE)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(STRENGTH);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveInvisibility(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveInvisibility(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.INVISIBILITY)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(INVISIBILITY);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveNightVision(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveNightVision(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.NIGHT_VISION)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(NIGHT_VISION);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveFireResistance(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveFireResistance(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.FIRE_RESISTANCE)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(FIRE_RESISTANCE);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveSlowness(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveSlowness(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.SLOW)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(SLOWNESS);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SLOW, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveWeakness(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveWeakness(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.WEAKNESS)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(WEAKNESS);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, duration, amplifier, false, false));
         }
 
     }
 
-    public static void givePoison(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void givePoison(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.POISON)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(POISON);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.POISON, duration, amplifier, false, false));
         }
 
     }
 
-    public static void giveBlindness(@NotNull PlayerData player) {
-        PotionEffect power = null;
+    public static void giveBlindness(@NotNull PlayerData player, int duration, int amplifier) {
+        PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.BLINDNESS)) {
-                power = potionEffect;
+                effect = potionEffect;
             }
         }
-        if (power == null) {
-            player.getPlayer().addPotionEffect(BLINDNESS);
+        if (effect == null) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, duration, amplifier, false, false));
         }
 
     }
