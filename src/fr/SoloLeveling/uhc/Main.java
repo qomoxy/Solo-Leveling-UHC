@@ -5,15 +5,25 @@ import fr.SoloLeveling.uhc.Cmd.SayCmd;
 import fr.SoloLeveling.uhc.Cmd.SlCmd;
 import fr.SoloLeveling.uhc.Cmd.StartCmd;
 import fr.SoloLeveling.uhc.Event.Evenement;
+
+import fr.SoloLeveling.uhc.Event.GPlayerListerner;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
+    private GState state;
+
     @Override
     public void onEnable() {
 
+        setState(GState.WAITING);
+
         System.out.println("Le Plugin Solo Leveling UHC est Active.");
+
+        PluginManager pm = getServer().getPluginManager();
+        pm.registerEvents(new GPlayerListerner(this), this);
 
         getCommand("sl").setExecutor(new SlCmd());
         getCommand("say").setExecutor(new SayCmd());
@@ -24,13 +34,18 @@ public class Main extends JavaPlugin {
 
     }
 
-    @Override
-    public void onDisable() {
 
-        System.out.println("Le plugin Solo leveling est Désactive.");
-
+    public void setState(GState state) {
+       this.state = state;
     }
 
+    public GState getState() {
+        return state;
+    }
+
+    public boolean isState(GState state) {
+        return this.state == state;
+    }
 
 }
 
