@@ -1,26 +1,36 @@
 package fr.SoloLeveling.uhc.roles.demon;
 
-import org.bukkit.potion.PotionEffect;
-
 import javax.management.ObjectName;
-import javax.management.relation.Role;
 import java.util.List;
 
-public class Sun_IL_HWAN extends Role {
+import fr.SoloLeveling.uhc.utils.Potionutil;
+import fr.SoloLeveling.uhc.Player.PlayerData;
 
-    /**
-     * <p>Make a new Role object.
-     * No check is made that the ObjectNames in the role value exist in
-     * an MBean server.  That check will be made when the role is set
-     * in a relation.
-     *
-     * @param roleName  role name
-     * @param roleValue role value (List of ObjectName objects)
-     * @throws IllegalArgumentException if null parameter
-     */
-    public Sun_IL_HWAN(String roleName, List<ObjectName> roleValue) throws IllegalArgumentException {
-        super(roleName, roleValue);
+import static fr.SoloLeveling.uhc.utils.Potionutil.giveSpeed;
+
+
+public class Sun_IL_HWAN {
+
+    private List<ObjectName> roles;
+
+    public String getName() {
+        return "Sun IL HWAN";
     }
 
+    public String getDescription() {
+        return "Sun IL HWAN";
+    }
+
+    public List<ObjectName> getRoles() {
+        return roles;
+    }
+
+    public void giveEffectAndItems(PlayerData player) {
+        giveSpeed(player, 100, 1);
+    }
+
+    public void giveEffect(PlayerData player) {
+        giveSpeed(player, 100, 1);
+    }
 
 }
