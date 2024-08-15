@@ -1,5 +1,6 @@
 package fr.SoloLeveling.uhc.Player;
 
+import fr.SoloLeveling.uhc.utils.CustomItem;
 import org.bukkit.entity.Player;
 
 public class PlayerData {
@@ -92,6 +93,10 @@ public class PlayerData {
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    public void addItem(CustomItem.ItemBuilder item){
+        player.getInventory().addItem(item);
     }
 
     public void reset() {

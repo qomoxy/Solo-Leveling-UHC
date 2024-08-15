@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
@@ -87,6 +88,11 @@ public class CustomItem {
             return this;
         }
 
+        public ItemBuilder itemStoreEnchantement(Enchantment enchantment, int level) {
+            EnchantmentStorageMeta meta = (EnchantmentStorageMeta) itemStack.getItemMeta();
+            meta.addStoredEnchant(enchantment, level, true);
+            return this;
+        }
 
         public CustomItem build() {
             itemStack.setItemMeta(itemMeta);

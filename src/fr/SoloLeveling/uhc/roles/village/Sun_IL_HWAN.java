@@ -1,9 +1,8 @@
-package fr.SoloLeveling.uhc.roles.demon;
+package fr.SoloLeveling.uhc.roles.village;
 
 import javax.management.ObjectName;
 import java.util.List;
 
-import fr.SoloLeveling.uhc.utils.Potionutil;
 import fr.SoloLeveling.uhc.Player.PlayerData;
 
 import static fr.SoloLeveling.uhc.utils.Potionutil.giveSpeed;

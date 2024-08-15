@@ -10,10 +10,6 @@ public class Yogumunt {
     }
 
     public void giveEffectAndItems() {
-        //TODO: Implement this method
-    }
-
-    public void giveEffect() {
-        //TODO: Implement this method
+        // TODO : Mettre l'item pour se tp
     }
 }
