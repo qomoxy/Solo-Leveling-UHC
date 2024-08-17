@@ -12,7 +12,7 @@ public class Legia {
     public String getDescription(){ return "Legia Description";}
 
     public void giveEffects(PlayerData player) {
-        giveResistance(player, 10, 1);
-        giveStrength(player, 10, 1);
+        giveResistance(player.getPlayer(), 10, 1);
+        giveStrength(player.getPlayer(), 10, 1);
     }
 }

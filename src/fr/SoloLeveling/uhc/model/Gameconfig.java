@@ -1,7 +1,5 @@
 package fr.SoloLeveling.uhc.model;
 
-import org.jetbrains.annotations.Nullable;
-
 public class Gameconfig {
 
     private static int role_time;

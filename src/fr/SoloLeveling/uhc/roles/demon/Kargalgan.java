@@ -1,11 +1,9 @@
 package fr.SoloLeveling.uhc.roles.demon;
 
 import static fr.SoloLeveling.uhc.utils.Potionutil.giveFireResistance;
-import static org.bukkit.Material.ENCHANTED_BOOK;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
-import fr.SoloLeveling.uhc.utils.CustomItem.ItemBuilder;
-import org.bukkit.enchantments.Enchantment;
+
 
 
 public class Kargalgan {
@@ -18,13 +16,13 @@ public class Kargalgan {
     }
 
     public void giveEffectAndItems(PlayerData player) {
-        giveFireResistance(player, 10, 1);
-        ItemBuilder book = new ItemBuilder(ENCHANTED_BOOK, 1);
-        book.itemStoreEnchantement(Enchantment.ARROW_FIRE, 1);
-        player.addItem(book);
+        //giveFireResistance(player, 10, 1);
+        //ItemBuilder book = new ItemBuilder(ENCHANTED_BOOK, 1);
+        //book.itemStoreEnchantement(Enchantment.ARROW_FIRE, 1);
+        //player.addItem(book);
     }
 
     public void giveEffect(PlayerData player) {
-        giveFireResistance(player, 10, 1);
+        giveFireResistance(player.getPlayer(), 10, 1);
     }
 }

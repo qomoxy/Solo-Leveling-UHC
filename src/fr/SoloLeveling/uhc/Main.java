@@ -1,12 +1,9 @@
 package fr.SoloLeveling.uhc;
 
-import fr.SoloLeveling.uhc.Cmd.MbCmd;
-import fr.SoloLeveling.uhc.Cmd.SayCmd;
-import fr.SoloLeveling.uhc.Cmd.SlCmd;
-import fr.SoloLeveling.uhc.Cmd.StartCmd;
+import fr.SoloLeveling.uhc.Cmd.*;
 import fr.SoloLeveling.uhc.Event.Evenement;
-
 import fr.SoloLeveling.uhc.Event.GPlayerListerner;
+
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -23,17 +20,17 @@ public class Main extends JavaPlugin {
         System.out.println("Le Plugin Solo Leveling UHC est Active.");
 
         PluginManager pm = getServer().getPluginManager();
+
         pm.registerEvents(new GPlayerListerner(this), this);
+        pm.registerEvents(new Evenement(), this);
 
         getCommand("sl").setExecutor(new SlCmd());
         getCommand("say").setExecutor(new SayCmd());
         getCommand("mb").setExecutor(new MbCmd());
         getCommand("start").setExecutor(new StartCmd());
-
-        Bukkit.getPluginManager().registerEvents(new Evenement(), this);
+        getCommand("test").setExecutor(new TestCmd());
 
     }
-
 
     public void setState(GState state) {
        this.state = state;

@@ -1,6 +1,7 @@
 package fr.SoloLeveling.uhc.utils;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
+import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.jetbrains.annotations.NotNull;
@@ -13,7 +14,7 @@ public class Potionutil {
     //Je vais donc creer une methode qui prend en parametre le type de l'effet, la duration et l'amplificateur.
 
 
-    public static void giveSpeed(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveSpeed(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.SPEED)) {
@@ -26,7 +27,7 @@ public class Potionutil {
 
     }
 
-    public static void giveRegen(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveRegen(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.REGENERATION)) {
@@ -39,7 +40,7 @@ public class Potionutil {
 
     }
 
-    public static void giveResistance(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveResistance(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.DAMAGE_RESISTANCE)) {
@@ -52,7 +53,7 @@ public class Potionutil {
 
     }
 
-    public static void giveStrength(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveStrength(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.INCREASE_DAMAGE)) {
@@ -65,7 +66,7 @@ public class Potionutil {
 
     }
 
-    public static void giveInvisibility(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveInvisibility(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.INVISIBILITY)) {
@@ -78,7 +79,7 @@ public class Potionutil {
 
     }
 
-    public static void giveNightVision(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveNightVision(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.NIGHT_VISION)) {
@@ -91,7 +92,7 @@ public class Potionutil {
 
     }
 
-    public static void giveFireResistance(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveFireResistance(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.FIRE_RESISTANCE)) {
@@ -104,7 +105,7 @@ public class Potionutil {
 
     }
 
-    public static void giveSlowness(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveSlowness(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.SLOW)) {
@@ -117,7 +118,7 @@ public class Potionutil {
 
     }
 
-    public static void giveWeakness(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveWeakness(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.WEAKNESS)) {
@@ -130,7 +131,7 @@ public class Potionutil {
 
     }
 
-    public static void givePoison(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void givePoison(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.POISON)) {
@@ -143,7 +144,7 @@ public class Potionutil {
 
     }
 
-    public static void giveBlindness(@NotNull PlayerData player, int duration, int amplifier) {
+    public static void giveBlindness(@NotNull Player player, int duration, int amplifier) {
         PotionEffect effect = null;
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             if (potionEffect.getType().equals(PotionEffectType.BLINDNESS)) {
@@ -156,51 +157,51 @@ public class Potionutil {
 
     }
 
-    public static void removeSpeed(@NotNull PlayerData player) {
+    public static void removeSpeed(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.SPEED);
     }
 
-    public static void removeRegen(@NotNull PlayerData player) {
+    public static void removeRegen(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.REGENERATION);
     }
 
-    public static void removeResistance(@NotNull PlayerData player) {
+    public static void removeResistance(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
     }
 
-    public static void removeStrength(@NotNull PlayerData player) {
+    public static void removeStrength(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.INCREASE_DAMAGE);
     }
 
-    public static void removeInvisibility(@NotNull PlayerData player) {
+    public static void removeInvisibility(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.INVISIBILITY);
     }
 
-    public static void removeNightVision(@NotNull PlayerData player) {
+    public static void removeNightVision(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.NIGHT_VISION);
     }
 
-    public static void removeFireResistance(@NotNull PlayerData player) {
+    public static void removeFireResistance(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.FIRE_RESISTANCE);
     }
 
-    public static void removeSlowness(@NotNull PlayerData player) {
+    public static void removeSlowness(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.SLOW);
     }
 
-    public static void removeWeakness(@NotNull PlayerData player) {
+    public static void removeWeakness(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.WEAKNESS);
     }
 
-    public static void removePoison(@NotNull PlayerData player) {
+    public static void removePoison(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.POISON);
     }
 
-    public static void removeBlindness(@NotNull PlayerData player) {
+    public static void removeBlindness(@NotNull Player player) {
         player.getPlayer().removePotionEffect(PotionEffectType.BLINDNESS);
     }
 
-    public static void removeAll(@org.jetbrains.annotations.NotNull PlayerData player) {
+    public static void removeAll(@org.jetbrains.annotations.NotNull Player player) {
         for (PotionEffect potionEffect : player.getPlayer().getActivePotionEffects()) {
             player.getPlayer().removePotionEffect(potionEffect.getType());
         }

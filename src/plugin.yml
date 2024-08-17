@@ -3,6 +3,7 @@ version: 0.1
 description: Un plugin UHC sur le theme de l'oeuvre Solo Leveling.
 main: fr.SoloLeveling.uhc.Main
 author: Qomoxyy l3mon_ice
+
 commands:
   sl:
     description: Permet d'accéder à toutes les commandes du mode de jeu UHC Solo Leveling.
@@ -24,5 +25,9 @@ commands:
     permission-message: None
   start:
     description: Permet de lancer la partie.
+    permission: admin
+    permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.
+  test:
+    description: Permet de tester les commandes.
     permission: admin
     permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.

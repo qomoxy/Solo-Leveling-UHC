@@ -25,11 +25,11 @@ public class Sun_IL_HWAN {
     }
 
     public void giveEffectAndItems(PlayerData player) {
-        giveSpeed(player, 100, 1);
+        giveSpeed(player.getPlayer(), 100, 1);
     }
 
     public void giveEffect(PlayerData player) {
-        giveSpeed(player, 100, 1);
+        giveSpeed(player.getPlayer(), 100, 1);
     }
 
 }
