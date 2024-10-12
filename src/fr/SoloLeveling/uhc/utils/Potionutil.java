@@ -1,14 +1,11 @@
 package fr.SoloLeveling.uhc.utils;
 
-import fr.SoloLeveling.uhc.Player.PlayerData;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.jetbrains.annotations.NotNull;
 
 public class Potionutil {
-
-
 
     //J'aimerais enleve toutes la creations des effets de potions et les mettre dans une seule methode, afin de simplifier et de pouvoir changer la duration et l'amplificateur.
     //Je vais donc creer une methode qui prend en parametre le type de l'effet, la duration et l'amplificateur.

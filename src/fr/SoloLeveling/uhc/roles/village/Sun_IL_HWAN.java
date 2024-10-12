@@ -4,11 +4,13 @@ import javax.management.ObjectName;
 import java.util.List;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
+import fr.SoloLeveling.uhc.roles.RoleEffect;
+import org.jetbrains.annotations.NotNull;
 
 import static fr.SoloLeveling.uhc.utils.Potionutil.giveSpeed;
 
 
-public class Sun_IL_HWAN {
+public class Sun_IL_HWAN implements RoleEffect {
 
     private List<ObjectName> roles;
 
@@ -24,11 +26,13 @@ public class Sun_IL_HWAN {
         return roles;
     }
 
-    public void giveEffectAndItems(PlayerData player) {
-        giveSpeed(player.getPlayer(), 100, 1);
+    @Override
+    public void giveEffects(PlayerData playerData) {
+        giveSpeed(playerData.getPlayer(), 100, 1);
     }
 
-    public void giveEffect(PlayerData player) {
+    @Override
+    public void giveEffectAndItems(@NotNull PlayerData player) {
         giveSpeed(player.getPlayer(), 100, 1);
     }
 

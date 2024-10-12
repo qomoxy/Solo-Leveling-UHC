@@ -6,5 +6,5 @@ Feel free to stay here and check the README for updates from time to time!
 Thanks for your support, and have a great day!
 
 ## Updates
-Last updates: ```07/10/2024```
+Last updates: ```12/10/2024```
 *Equip of the plugin*

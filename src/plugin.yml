@@ -9,6 +9,7 @@ commands:
     description: Permet d'accéder à toutes les commandes du mode de jeu UHC Solo Leveling.
     permission: admin
     permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.
+
   sl color:
     description: Permet de mettre en couleur les joueurs de la partie.
     permission: None
@@ -28,6 +29,10 @@ commands:
     permission: admin
     permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.
   test:
-    description: Permet de tester les commandes.
+    description: Permet de tester les commandes. (temporaire)
+    permission: admin
+    permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.
+  role:
+    description:  Permet de donner un rôle choisi (temporaire).
     permission: admin
     permission-message: §4[SL] Vous n'avez pas les permission pour utiliser cette commande.

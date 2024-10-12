@@ -1,11 +1,17 @@
 package fr.SoloLeveling.uhc.Player;
 
+import fr.SoloLeveling.uhc.model.Role;
+import fr.SoloLeveling.uhc.roles.RoleEffect;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class PlayerData {
 
-    private String role;
+    private Role role;
+    private static final Map<Role, RoleEffect> roleEffects = new HashMap<>();
 
     private boolean alive;
     private boolean canUsePower;
@@ -19,20 +25,31 @@ public class PlayerData {
 
     public PlayerData(Player player) {
         this.player = player;
-        this.role = "";
+        Role role = null;
         this.alive = true;
         this.canUsePower = false;
-        this.connected = true;
+        this.connected = false;
         this.nbKill = 0;
         this.nbdiamond = 0;
     }
 
     public void setRole(String role) {
-        this.role = role;
+        this.role = Role.valueOf(role);
+        applyRoleEffects();
     }
 
     public String getRole() {
-        return role;
+        return role.name();
+    }
+
+    public void applyRoleEffects() {
+        RoleEffect roleEffect = roleEffects.get(role);
+        if (roleEffect != null) {
+            roleEffect.giveEffects(this);
+        }
+    }
+    public RoleEffect getRoleEffect() {
+        return roleEffects.get(role);
     }
 
     public void setAlive(boolean alive) {
@@ -100,11 +117,15 @@ public class PlayerData {
     }
 
     public void reset() {
-        this.role = "";
+        this.role = null;
         this.alive = true;
         this.canUsePower = false;
         this.connected = true;
         this.nbKill = 0;
         this.nbdiamond = 0;
+    }
+
+    public PlayerData getInventory() {
+        return this;
     }
 }

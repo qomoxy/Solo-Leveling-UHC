@@ -1,13 +1,13 @@
-package fr.SoloLeveling.uhc.roles.village;
+package fr.SoloLeveling.uhc.roles.solo;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
 import fr.SoloLeveling.uhc.roles.RoleEffect;
 
-public class Woo_Jinchul implements RoleEffect {
+public class Lee_Minsung  implements RoleEffect {
 
-    public String getName(){ return "Woo_Jinchul";}
+    public String getName() {return "Lee Minsung";}
 
-    public String getDescription(){ return "Woo_Jinchul Description";}
+    public String getDescription() { return "Lee Minsung Description";}
 
     @Override
     public void giveEffects(PlayerData playerData) {
