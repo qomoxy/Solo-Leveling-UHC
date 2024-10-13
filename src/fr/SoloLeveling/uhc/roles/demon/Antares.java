@@ -21,5 +21,4 @@ public class Antares implements RoleEffect {
 
     public String getDescription(){ return "Antares Description";}
 
-
 }

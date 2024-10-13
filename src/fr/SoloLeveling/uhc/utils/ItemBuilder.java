@@ -4,22 +4,19 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.bukkit.potion.PotionEffectType;
 
 
 public class ItemBuilder {
 
-    private ItemStack is;
+    private final ItemStack is;
 
     public ItemBuilder(Material m) {
         this.is = new ItemStack(m);
     }
 
-    public ItemBuilder amount(int amount) {
+    public void amount(int amount) {
         this.is.setAmount(amount);
-        return this;
     }
 
     public ItemBuilder name(String name) {
@@ -29,11 +26,10 @@ public class ItemBuilder {
         return this;
     }
 
-    public ItemBuilder lore(String name) {
+    public void lore(String name) {
         ItemMeta meta = is.getItemMeta();
         meta.setDisplayName(name);
         is.setItemMeta(meta);
-        return this;
     }
 
     public ItemBuilder durability(int durability) {
@@ -46,9 +42,8 @@ public class ItemBuilder {
         return this;
     }
 
-    public ItemBuilder enchantment(Enchantment enchantment, int level) {
+    public void enchantment(Enchantment enchantment, int level) {
         is.addUnsafeEnchantment(enchantment, level);
-        return this;
     }
 
     public ItemBuilder enchantment(Enchantment enchantment) {
@@ -80,11 +75,10 @@ public class ItemBuilder {
         return this;
     }
 
-    public ItemBuilder itemStoreEnchantement(Enchantment enchantement, int level) {
+    public void itemStoreEnchantement(Enchantment enchantement, int level) {
         ItemMeta meta = is.getItemMeta();
         meta.addEnchant(enchantement, level, true);
         is.setItemMeta(meta);
-        return this;
     }
 
     public ItemStack build() {

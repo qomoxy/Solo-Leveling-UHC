@@ -43,7 +43,7 @@ public enum Role{
     ARCHITECT(RoleCamps.DUO),
     LEE_MINSUNG(RoleCamps.SOLO),;
 
-    private RoleCamps clan;
+    private final RoleCamps clan;
 
     Role(RoleCamps roleCamps) {
         this.clan = roleCamps;

@@ -16,7 +16,7 @@ public class role implements CommandExecutor {
             if (playerData.getRole() == null) {
                 playerData.setRole(s);
             } else {
-                p.sendMessage(new String(String.valueOf(playerData.getRole())));
+                p.sendMessage(String.valueOf(playerData.getRole()));
             }
 
             return true;

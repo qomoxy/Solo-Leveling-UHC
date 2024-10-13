@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 
 public class GPlayerListerner implements Listener {
 
-    private Main main;
+    private final Main main;
 
     public GPlayerListerner(Main main) {
         this.main = main;
