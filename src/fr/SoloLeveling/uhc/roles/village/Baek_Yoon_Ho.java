@@ -1,6 +1,7 @@
 package fr.SoloLeveling.uhc.roles.village;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
+import fr.SoloLeveling.uhc.model.Role;
 import fr.SoloLeveling.uhc.roles.RoleEffect;
 import fr.SoloLeveling.uhc.utils.ItemBuilder;
 
@@ -9,10 +10,17 @@ import org.jetbrains.annotations.NotNull;
 
 public class Baek_Yoon_Ho implements RoleEffect {
 
-    public String getname() {
+    @Override
+    public String getName() {
         return "Baek_Yoon_Ho";
     }
 
+    @Override
+    public Role getRoleEnum() {
+        return Role.BAEK_YOON_HO;
+    }
+
+    @Override
     public String getDescription() {
         return "Baek_Yoon_Ho Description";
     }

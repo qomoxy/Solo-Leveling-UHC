@@ -5,7 +5,8 @@ import fr.SoloLeveling.uhc.Event.Evenement;
 import fr.SoloLeveling.uhc.Event.GPlayerListerner;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
-import fr.SoloLeveling.uhc.task.RoleEffectTask;
+import fr.SoloLeveling.uhc.model.GState;
+import fr.SoloLeveling.uhc.task.RoleEffect;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -40,7 +41,7 @@ public class Main extends JavaPlugin {
         getCommand("test").setExecutor(new TestCmd());
         getCommand("role").setExecutor(new role());
 
-        Bukkit.getScheduler().runTaskTimer(this, new RoleEffectTask(playerDataMap), 0L, 200L);
+        Bukkit.getScheduler().runTaskTimer(this, new RoleEffect(playerDataMap), 0L, 200L);
 
     }
 

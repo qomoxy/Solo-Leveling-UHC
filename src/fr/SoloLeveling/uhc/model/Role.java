@@ -15,11 +15,11 @@ public enum Role{
     NORMA_SELMER(RoleCamps.HUNTERS),
     KEI(RoleCamps.HUNTERS),
     CHRISTOPHER_REED(RoleCamps.HUNTERS),
-    YURI_ORLOFF(RoleCamps.HUNTERS),
     MIN_BYUNG_GYU(RoleCamps.HUNTERS),
     MA_DONGWOOK(RoleCamps.HUNTERS),
     LIM_TAE_GYU(RoleCamps.HUNTERS),
     LIU_ZHIGANG(RoleCamps.HUNTERS),
+    LEGIA(RoleCamps.HUNTERS),
     HWANG_DONGSOO(RoleCamps.HUNTERS),
     MINORU_HOSHINO(RoleCamps.HUNTERS),
     TATSUMI_FUJISHIMA(RoleCamps.HUNTERS),
@@ -38,6 +38,10 @@ public enum Role{
     RAKAN(RoleCamps.MONSTERS),
     ANTARES(RoleCamps.MONSTERS),
     BARAN(RoleCamps.MONSTERS),
+    HWANG_DONGSUK(RoleCamps.LEZARD),
+    YURI_ORLOFF(RoleCamps.LEZARD),
+    KANG_TAESHIK(RoleCamps.LEZARD),
+    KIM_CHUL(RoleCamps.LEZARD),
     BELLION(RoleCamps.SOLO),
     ASHBORN(RoleCamps.DUO),
     ARCHITECT(RoleCamps.DUO),
@@ -52,5 +56,6 @@ public enum Role{
     public RoleCamps getClan() {
         return clan;
     }
+
 }
 

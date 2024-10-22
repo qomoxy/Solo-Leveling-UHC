@@ -2,8 +2,6 @@ package fr.SoloLeveling.uhc.model;
 
 public class Gameconfig {
 
-    private static int role_time;
-
     private static int nb_hunters;
     private static int nb_monsters;
     private static int nb_shadows;
@@ -18,7 +16,7 @@ public class Gameconfig {
 
     private static int nb_player;
 
-    private void GameConfig(int nb_hunters, int nb_monsters, int nb_solo, int nb_duo, int nb_mutable, int nb_role, int worldborder_size, int nb_shadows, int nb_lezad) {
+    private void GameConfig(int nb_hunters, int nb_monsters, int nb_solo, int nb_duo, int nb_mutable, int nb_role, int worldborder_size, int nb_shadows, int nb_lezad, int nb_player) {
         Gameconfig.nb_hunters = nb_hunters;
         Gameconfig.nb_monsters =  nb_monsters;
         Gameconfig.nb_shadows = nb_shadows;
@@ -27,6 +25,7 @@ public class Gameconfig {
         Gameconfig.nb_duo = nb_duo;
         Gameconfig.nb_mutable = nb_mutable;
         Gameconfig.nb_role = nb_role;
+        Gameconfig.nb_player = nb_player;
         Gameconfig.worldborder_size = worldborder_size;
     }
 
@@ -64,10 +63,6 @@ public class Gameconfig {
 
     public static int getWorldborder_size() {
         return worldborder_size;
-    }
-
-    public static int getRole_time() {
-        return role_time;
     }
 
     public static int getNb_player() {

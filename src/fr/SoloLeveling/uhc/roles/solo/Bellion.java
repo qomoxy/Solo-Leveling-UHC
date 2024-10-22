@@ -1,6 +1,7 @@
 package fr.SoloLeveling.uhc.roles.solo;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
+import fr.SoloLeveling.uhc.model.Role;
 import fr.SoloLeveling.uhc.roles.RoleEffect;
 import fr.SoloLeveling.uhc.utils.Potionutil;
 
@@ -10,8 +11,15 @@ public class Bellion implements RoleEffect {
 
     private int pact = 0;
 
+    @Override
     public String getName() { return "Bellion";}
 
+    @Override
+    public Role getRoleEnum() {
+        return Role.BELLION;
+    }
+
+    @Override
     public String getDescription() {return "Bellion Discription";}
 
     @Override

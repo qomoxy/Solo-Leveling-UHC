@@ -1,4 +1,4 @@
-package fr.SoloLeveling.uhc;
+package fr.SoloLeveling.uhc.model;
 
 public enum GState {
     WAITING,

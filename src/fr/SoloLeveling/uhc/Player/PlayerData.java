@@ -11,11 +11,13 @@ import java.util.Map;
 public class PlayerData {
 
     private Role role;
+
     private static final Map<Role, RoleEffect> roleEffects = new HashMap<>();
 
     private boolean alive;
     private boolean canUsePower;
-    private boolean connected;
+
+    private boolean scoreboard;
 
     private int nbKill;
 
@@ -28,7 +30,6 @@ public class PlayerData {
         Role role = null;
         this.alive = true;
         this.canUsePower = false;
-        this.connected = false;
         this.nbKill = 0;
         this.nbdiamond = 0;
     }
@@ -66,14 +67,6 @@ public class PlayerData {
 
     public boolean canUsePower() {
         return canUsePower;
-    }
-
-    public void setConnected(boolean connected) {
-        this.connected = connected;
-    }
-
-    public boolean isConnected() {
-        return connected;
     }
 
     public void setNbKill(int nbKill) {
@@ -120,7 +113,6 @@ public class PlayerData {
         this.role = null;
         this.alive = true;
         this.canUsePower = false;
-        this.connected = true;
         this.nbKill = 0;
         this.nbdiamond = 0;
     }

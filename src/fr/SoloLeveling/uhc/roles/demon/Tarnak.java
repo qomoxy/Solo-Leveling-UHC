@@ -1,6 +1,7 @@
 package fr.SoloLeveling.uhc.roles.demon;
 
 import fr.SoloLeveling.uhc.Player.PlayerData;
+import fr.SoloLeveling.uhc.model.Role;
 import fr.SoloLeveling.uhc.roles.RoleEffect;
 import fr.SoloLeveling.uhc.utils.ItemBuilder;
 
@@ -10,8 +11,15 @@ import org.jetbrains.annotations.NotNull;
 
 public class Tarnak implements RoleEffect {
 
+    @Override
     public String getName(){ return "Tarnak";}
 
+    @Override
+    public Role getRoleEnum() {
+        return null;
+    }
+
+    @Override
     public String getDescription(){ return "Tarnak Description";}
 
     @Override

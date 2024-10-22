@@ -4,7 +4,7 @@ public enum RoleCamps {
     HUNTERS,
     MONSTERS,
     SHADOWS,
-    LEZAD,
+    LEZARD,
     SOLO,
     DUO,
     MUTABLE
