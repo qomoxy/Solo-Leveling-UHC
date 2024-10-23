@@ -49,9 +49,7 @@ public enum Role{
 
     private final RoleCamps clan;
 
-    Role(RoleCamps roleCamps) {
-        this.clan = roleCamps;
-    }
+    Role(RoleCamps clan){ this.clan = clan; }
 
     public RoleCamps getClan() {
         return clan;

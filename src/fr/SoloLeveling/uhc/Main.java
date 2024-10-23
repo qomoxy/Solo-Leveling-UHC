@@ -18,14 +18,10 @@ import java.util.Map;
 
 public class Main extends JavaPlugin {
 
-    private GState state;
-
     private final Map<Player, PlayerData> playerDataMap = new HashMap<>();
 
     @Override
     public void onEnable() {
-
-        setState(GState.WAITING);
 
         System.out.println("Le Plugin Solo Leveling UHC est Active.");
 
@@ -48,18 +44,6 @@ public class Main extends JavaPlugin {
     public Map<Player, PlayerData> getPlayerDataMap() {
         return playerDataMap;
     }
-
-    public void setState(GState state) {
-       this.state = state;
-    }
-
-    public GState getState() {
-        return state;
-    }
-
-    public boolean isState(GState state) {
-        return this.state == state;
-    }
-
 }
+
 
